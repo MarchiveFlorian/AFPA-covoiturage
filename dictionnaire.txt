@@ -1,0 +1,75 @@
+1. User (Utilisateur)
+- id_user : Identifiant unique de l'utilisateur
+- last_name : Nom de famille de l'utilisateur
+- first_name : Prénom de l'utilisateur
+- email : Adresse email de l'utilisateur
+- password : Mot de passe de l'utilisateur
+- role : Rôle de l'utilisateur (peut être 'employee' ou 'student')
+- registration_date : Date d'inscription de l'utilisateur
+- is_active : Statut actif/inactif de l'utilisateur (boolean)
+- phone : Numéro de téléphone de l'utilisateur
+- birthdate : Date de naissance de l'utilisateur
+- address : Adresse de l'utilisateur
+- notif_preference : Préférence de notification de l'utilisateur
+
+2. Employee (Employé)
+- id_employee : Identifiant unique de l'employé
+- role : Rôle de l'employé
+- contract_duration : Durée du contrat
+
+3. Student (Étudiant)
+- id_student : Identifiant unique de l'étudiant
+- training_name : Nom de la formation suivie par l'étudiant
+
+4. Training_session (Session de formation)
+- id_training_session : Identifiant unique de la session de formation
+- name : Nom de la session de formation
+- start_date : Date de début de la session de formation
+- end_date : Date de fin de la session de formation
+
+5. Afpa_center (Centre AFPA)
+- id_afpa_center : Identifiant unique du centre AFPA
+- name : Nom du centre
+- city : Ville où se trouve le centre
+- address : Adresse du centre
+- schedule : Horaire du centre
+
+6. Notification (Notification)
+- id_notification : Identifiant unique de la notification
+- message : Message de la notification
+- notification_date : Date d'envoi de la notification
+- is_read : Indique si la notification a été lue (boolean)
+
+7. Participation (Participation)
+- id_participation : Identifiant unique de la participation
+- start_date : Date de début de la participation
+- end_date : Date de fin de la participation
+- status : Statut de la participation
+
+8. Comment (Commentaire)
+- id_comment : Identifiant unique du commentaire
+- comment_text : Texte du commentaire
+- comment_date : Date du commentaire
+
+9. Vehicle (Véhicule)
+- id_vehicle : Identifiant unique du véhicule
+- modele : Modèle du véhicule
+- vehicle_type : Type de véhicule
+- fuel_type : Type de carburant utilisé par le véhicule
+- empty_seat : Nombre de sièges vides disponibles
+- avg_fuel_consumption : Consommation moyenne de carburant (L/100km)
+
+10. Fuel (Carburant)
+- id_fuel : Identifiant unique du carburant
+- name : Nom du carburant
+- price : Prix du carburant
+
+11. Trip (Trajet)
+- id_trip : Identifiant unique du trajet
+- departure_address : Adresse de départ du trajet
+- departure_date : Date de départ du trajet
+- arrival_address : Adresse d'arrivée du trajet
+- trip_type : Type de trajet (aller-retour, simple)
+- trip_price : Prix du trajet
+- trip_description : Description du trajet
+- frequency : Fréquence du trajet
