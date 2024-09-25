@@ -4,6 +4,8 @@ CREATE TYPE employee_role AS ENUM ('formateur', 'administratif', 'externe', 'aut
 CREATE TYPE enum_fuel AS ENUM ('Essence', 'Gazole', 'GPL', 'Electrique');
 CREATE TYPE enum_vehicule AS ENUM ('Compact', 'Berline', '4x4', 'Monospace', 'Utilitaire');
 CREATE TYPE enum_trip AS ENUM ('ponctuel', 'régulier');
+CREATE TYPE enum_notif AS ENUM ('app', 'mail', 'sms');
+CREATE TYPE days AS ENUM ('Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi');
 
 -- Table "user"
 CREATE TABLE "user" (
@@ -18,7 +20,7 @@ CREATE TABLE "user" (
    phone VARCHAR(50),
    birthdate DATE,
    address VARCHAR(50),
-   notif_preference VARCHAR(50)
+   notif_preference enum_notif
 );
 
 -- Table participation
@@ -94,7 +96,7 @@ CREATE TABLE trip (
    trip_type enum_trip,
    trip_price DECIMAL(15,2),
    trip_description VARCHAR(50),
-   frequency VARCHAR(100),
+   frequency days[],
    Id_vehicle INT NOT NULL,
    Id_user INT NOT NULL,
    FOREIGN KEY (Id_vehicle) REFERENCES vehicle(Id_vehicle),
